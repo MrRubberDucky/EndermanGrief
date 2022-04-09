@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "endermangrief",
+  "version": "0.2",
+  "name": "Enderman Grief",
+  "description": "Enderman Grief allows you to tweak different (annoying) aspects of Endermen",
+  "authors": [
+    "OG_MrRubberDucky"
+  ],
+  "contact": {
+    "homepage": "https://github.com/MrRubberDucky/EndermanGrief/issues",
+    "sources": "https://github.com/MrRubberDucky/EndermanGrief"
+  },
+  "license": "MIT",
+  "icon": "assets/endermangrief/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "mrrubberducky.endermangrief.EndermanGriefMain"
+    ]
+  },
+  "mixins": [
+    "endermangrief.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.18.2",
+    "java": ">=17"
+  }
+}
