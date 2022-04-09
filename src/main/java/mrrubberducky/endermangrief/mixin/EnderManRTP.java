@@ -1,6 +1,7 @@
 package mrrubberducky.endermangrief.mixin;
 
 import mrrubberducky.endermangrief.EndermanGriefMain;
+import mrrubberducky.endermangrief.config.ConfigFile;
 import net.minecraft.entity.mob.EndermanEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EnderManRTP {
     @Inject(method = {"teleportRandomly"}, at = @At(value = "HEAD"), cancellable = true)
     private void teleport(CallbackInfoReturnable<Boolean> cir) {
-        if (EndermanGriefMain.EnderManGriefConfig.disableEnderManRTP) {
+        if (ConfigFile.Config.isEnabledEnderManRTP()) {
             cir.setReturnValue(false);
         }
     }

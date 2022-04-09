@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EnderManLava {
     @Inject(method = {"damage"}, at = @At(value = "HEAD"), cancellable = true)
     public void isFireImmune(CallbackInfoReturnable<Boolean> cir) {
-        if (!EndermanGriefMain.EnderManGriefConfig.enderManAffectedByFire) {
+        if (!ConfigFile.Config.isAffectedByFire()) {
             cir.setReturnValue(true);
         }
     }

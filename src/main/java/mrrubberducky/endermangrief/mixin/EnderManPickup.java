@@ -1,6 +1,7 @@
 package mrrubberducky.endermangrief.mixin;
 
 import mrrubberducky.endermangrief.EndermanGriefMain;
+import mrrubberducky.endermangrief.config.ConfigFile;
 import net.minecraft.entity.mob.EndermanEntity;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -13,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class EnderManPickup {
     @Inject(method = "canStart()Z", at = @At(value = "HEAD"), cancellable = true)
     public void canStart(CallbackInfoReturnable<Boolean> cir) {
-        if (EndermanGriefMain.EnderManGriefConfig.disableEnderManBlockPickUp) {
+        if (ConfigFile.Config.isEnabledBlockPickUp()) {
             cir.setReturnValue(false);
         }
     }
