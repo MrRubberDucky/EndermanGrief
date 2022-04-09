@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "mrrubberducky.endermangrief.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "EnderManRTP",
+    "EnderManPickup",
+    "EnderManPlace",
+    "EnderManWater",
+    "EnderManPotion",
+    "EnderManLava",
+    "EnderManAngry",
+    "EndermanDespawn"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
