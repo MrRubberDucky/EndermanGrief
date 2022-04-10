@@ -7,4 +7,4 @@ Currently, EndermanGrief allows you to:
 - Stop Endermen from being hurt while in lava & fire
 - Stop Endermen from being hurt while being in water
 - Stop Endermen from despawning
-- Make Endermen always be angry at player
+- Make Endermen be always angry at player
